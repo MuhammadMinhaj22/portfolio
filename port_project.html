@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhammad Minhaj - Project Portfolio. Showcasing various projects in Python, AI, web development, and automation.">
+  <meta name="keywords" content="Python, AI, Projects, Portfolio, Machine Learning, Web Development, Automation">
+  <meta name="author" content="Muhammad Minhaj">
+  <meta property="og:title" content="Muhammad Minhaj - Project Portfolio">
+  <meta property="og:description" content="Project portfolio of Muhammad Minhaj, showcasing various projects">
+  <meta property="og:type" content="website">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>Minhaj's Project Portfolio - Python Developer & AI Enthusiast</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- External styles -->
+  <link rel="stylesheet" href="enhanced-style.css">
+
+  <!-- Additional styles for project page if needed -->
+  <style>
+    /* Override specific styles for project page if needed */
+    html,
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      font-size: 18px;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 1.5rem 4rem;
+    }
+
+    /* Project-specific overrides */
+    .project-card {
+      height: 400px; /* Slightly taller for project page */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 50%;" />
+        M.Minhaj
+      </h1>
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+  <!-- ---------------- PROJECTS ---------------- -->
+  <section id="projects" class="fade-in">
+    <div class="wrap">
+      <h2>My Projects</h2>
+      <div class="projects">
+
+        <!-- Jarvis -->
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/Jarvis_1.1-AI-Assistant" target="_blank">
+          <img src="Capture4.PNG" alt="Jarvis 1.1 AI Assistant application interface" style="height: 500px;" loading="lazy"/>
+          <div class="label">Python • gTTS</div>
+          <div class="content">
+            <h3>Jarvis-1.1 AI Assistant</h3>
+            <p>Voice-enabled assistant built with Tkinter, gTTS and more.</p>
+            <div><span class="btn">View on GitHub</span></div>
+          </div>
+        </a>
+
+        <!-- Car Racing -->
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/Car_racing_game" target="_blank">
+          <img src="Capture2.PNG" alt="Screenshot of Car Racing Game showing gameplay" loading="lazy"/>
+          <div class="label">Python • Pygame</div>
+          <div class="content">
+            <h3>Car Racing Game</h3>
+            <p>2D racing game with obstacles and score mechanics.</p>
+            <div><span class="btn">View on GitHub</span></div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/travel-agency" target="_blank">
+                    <img src="Capture.PNG" alt="Explore-World Travels website homepage screenshot" loading="lazy">
+                    <div class="label">Web • HTML/CSS</div>
+                    <div class="content">
+                        <h3>Explore-World Travels</h3>
+                        <p>Responsive travel website showcasing destinations and packages.</p>
+                        <div><span class="btn">View on GitHub</span></div>
+                    </div>
+                </a>
+
+
+        <!-- automation -->
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/n8n-automation-data-workflow" target="_blank">
+          <img src="pic1.png" alt="Data Automation workflow diagram in n8n platform" loading="lazy"/>
+          <div class="label">n8n Workflow</div>
+          <div class="content">
+            <h3>Data Automation Workflow (n8n)</h3>
+            <p>Automated workflow created in n8n to fetch data via HTTP, process it conditionally, update records in Airtable, and send notifications to Discord.</p>
+            <div><span class="btn">View on GitHub</span></div>
+          </div>
+        </a>
+
+        <!-- AI Chatbot -->
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/n8n-AI_chatbot" target="_blank">
+          <img src="Capture9.PNG" alt="AI Chatbot workflow interface in n8n" loading="lazy"/>
+          <div class="label">n8n Workflow</div>
+          <div class="content">
+            <h3>AI Agent Workflow (n8n)</h3>
+            <p>I built an AI-powered chat agent using n8n, OpenRouter Chat Model, and Simple Memory.</p>
+            <div><span class="btn">View on GitHub</span></div>
+          </div>
+        </a>
+
+        <!-- NASA Solar Flare -->
+        <a class="project-card" href="https://github.com/MuhammadMinhaj22/n8n-NASA-solarflare" target="_blank">
+          <img src="Capture10.PNG" alt="NASA Solar Flare monitoring workflow in n8n" loading="lazy"/>
+          <div class="label">n8n Workflow</div>
+          <div class="content">
+            <h3>NASA Solar Flare Workflow (n8n)</h3>
+            <p>This workflow uses NASA DONKI API to fetch solar flare data on schedule.</p>
+            <div><span class="btn">View on GitHub</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <div class="btn-container">
+      <a href="https://github.com/MuhammadMinhaj22" class="btn1">View more projects on my Github.</a>
+    </div>
+  </section>
+
+  <script>
+    // 3D tilt effect
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const dx = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+        const dy = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+        card.style.transform = `perspective(900px) rotateX(${dy * 6}deg) rotateY(${dx * -6}deg) translateY(-6px)`;
+        card.querySelector('img').style.transform = `scale(1.08) translate(${dx * -6}px,${dy * -6}px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = ''; card.querySelector('img').style.transform = '';
+      });
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 M.Minhaj. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      offset: 120,
+      once: false,
+      easing: 'ease-in-out-cubic'
+    });
+  </script>
+  <script src="cursor-effect.js"></script>
+</body>
+
+</html>
+
+
+
+
+
