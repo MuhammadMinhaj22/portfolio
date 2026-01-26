@@ -59,7 +59,7 @@
         M.Minhaj
       </h1>
 
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
 
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -74,9 +74,18 @@
   <script>
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
+    const toggleIcon = toggle.querySelector('i');
 
     toggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      toggle.classList.toggle("active"); // Toggle active class on menu-toggle itself
+      if (toggle.classList.contains('active')) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+      } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+      }
     });
   </script>
 
@@ -93,6 +102,9 @@
           <div class="content">
             <h3>Jarvis-1.1 AI Assistant</h3>
             <p>Voice-enabled assistant built with Tkinter, gTTS and more.</p>
+            <div class="tech-stack">
+                <strong>Technologies Used:</strong> Python, Tkinter, gTTS
+            </div>
             <div><span class="btn">View on GitHub</span></div>
           </div>
         </a>
@@ -104,6 +116,9 @@
           <div class="content">
             <h3>Car Racing Game</h3>
             <p>2D racing game with obstacles and score mechanics.</p>
+            <div class="tech-stack">
+                <strong>Technologies Used:</strong> Python, Pygame
+            </div>
             <div><span class="btn">View on GitHub</span></div>
           </div>
         </a>
@@ -114,6 +129,9 @@
                     <div class="content">
                         <h3>Explore-World Travels</h3>
                         <p>Responsive travel website showcasing destinations and packages.</p>
+                        <div class="tech-stack">
+                            <strong>Technologies Used:</strong> HTML, CSS, JavaScript
+                        </div>
                         <div><span class="btn">View on GitHub</span></div>
                     </div>
                 </a>
@@ -126,6 +144,9 @@
           <div class="content">
             <h3>Data Automation Workflow (n8n)</h3>
             <p>Automated workflow created in n8n to fetch data via HTTP, process it conditionally, update records in Airtable, and send notifications to Discord.</p>
+            <div class="tech-stack">
+                <strong>Technologies Used:</strong> n8n, Airtable, Discord Webhooks
+            </div>
             <div><span class="btn">View on GitHub</span></div>
           </div>
         </a>
@@ -137,6 +158,9 @@
           <div class="content">
             <h3>AI Agent Workflow (n8n)</h3>
             <p>I built an AI-powered chat agent using n8n, OpenRouter Chat Model, and Simple Memory.</p>
+            <div class="tech-stack">
+                <strong>Technologies Used:</strong> n8n, OpenRouter Chat Model, Simple Memory
+            </div>
             <div><span class="btn">View on GitHub</span></div>
           </div>
         </a>
@@ -148,6 +172,9 @@
           <div class="content">
             <h3>NASA Solar Flare Workflow (n8n)</h3>
             <p>This workflow uses NASA DONKI API to fetch solar flare data on schedule.</p>
+            <div class="tech-stack">
+                <strong>Technologies Used:</strong> n8n, NASA DONKI API
+            </div>
             <div><span class="btn">View on GitHub</span></div>
           </div>
         </a>
@@ -190,6 +217,20 @@
     });
   </script>
   <script src="cursor-effect.js"></script>
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <script>
+    const backToTopButton = document.querySelector(".back-to-top");
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) { // Show button after scrolling down 300px
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+  </script>
 </body>
 
 </html>
